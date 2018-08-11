@@ -10,10 +10,10 @@ CREATE TABLE players (
   PRIMARY KEY (pid)
 );
 -- create gamestats table
-CREATE TABLE gamestats (
+CREATE TABLE gamestate (
   gsid INT NOT NULL AUTO_INCREMENT,
   gid INT NOT NULL,
-  pid INT NOT NULL,
+  pid1Turn Boolean, --player turn fix
   cel1 VARCHAR(30) NOT NULL,
   cel2 VARCHAR(30) NOT NULL,
   cel3 VARCHAR(30) NOT NULL,
@@ -29,5 +29,8 @@ CREATE TABLE gamestats (
 CREATE TABLE games (
   gid INT NOT NULL AUTO_INCREMENT,
   gametitle VARCHAR(100) NOT NULL,
+  gameStatus Boolean DEFAULT true,
+  pid1 INT,
+  pid2 INT,
   PRIMARY KEY (gid)
 );

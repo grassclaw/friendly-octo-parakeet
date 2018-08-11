@@ -9,7 +9,7 @@ $(document).ready(function() {
     $.ajax("/" + id, {
       type: "PUT"
     }).then(function(response) {
-      GET(data); //  expect constructor as in app/data/gameStatus.js
+      GET(data); //  expect constructor as in app/data/gameState.js
 
       //  new for TTT
       // $("#cel1").text(data[0].celVal); //hardcoding option
