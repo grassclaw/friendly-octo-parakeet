@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <title>TiTaTo Busters</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style_ad.css" rel="stylesheet">
+</head>
+
+<body class="text-center">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">TiTaTo</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link " href="">UserName</a>
+        </nav>
+      </div>
+    </header>
+    <main role="main" class="inner cover">
+      <h1 class="cover-heading">
+        <img src="images/avatar2.svg" alt="" class="mr-2 mt-3" height="100px" width="100px">
+      </h1>
+      <!-- Jquery would use id="whosemove" to populate this with Make a move or Their turn based whose move it is -->
+      <p class="lead mb-5" id="whosemove">Make a move </p>
+         <!-- XOXO table Content from index.handlebars -->
+      {{{body}}}
+      <!--           -->
+      <div class="my-3 p-3 bg-black rounded shadow-sm">
+        <h5 style="border-bottom: dashed; border-color: #e8b46a " class="  pb-2 mb-0">Score</h5>
+        <div class="media  pt-3">
+          <p class="media-body pb-3 mb-0 small lh-125  text-left" style="border-bottom: dashed; border-color: #e8b46a ">
+            <strong>Opponent: _</strong>
+            <strong class=" float-right  ">You: _</strong>
+          </p>
+        </div>
+      </div>
+    </main>
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>&copy; 2018</p>
+      </div>
+    </footer>
+  </div>
+  <!-- Bootstrap core JavaScript
+    ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script src="assets/js/vendor/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/game.js"></script>
+  <script>
+  </script>
+</body>
+
+</html>
