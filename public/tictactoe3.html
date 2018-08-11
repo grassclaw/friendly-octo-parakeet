@@ -1,110 +1,106 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-<link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
 
-    <title>TiTaTo Busters</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <title>TiTaTo Busters</title>
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="css/style_ad.css" rel="stylesheet">
+</head>
 
-    <!-- Bootstrap core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom styles for this template -->
-  
-	  <link href="css/style_ad.css" rel="stylesheet">
-  </head>
-
-  <body class="text-center">
-
-    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <h3 class="masthead-brand">TiTaTo</h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link " href="">UserName</a>
-          
-          </nav>
-        </div>
-      </header>
-
-      <main role="main" class="inner cover">
-        <h1 class="cover-heading"><img src="images/avatar2.svg" alt=""  class="mr-2 mt-3" height="100px" width="100px"></h1>
-        <p class="lead mb-5">Make a move </p>
-        
-<table>
-  <tr>
-    <td id="cel1"><img src="images/x.svg" alt=""  class="mr-2 mt-3 " style="visibility: hidden" height="50px" width="50px"></td>
-    <td id="cel2" class="vert"><img src="images/x.svg" alt=""  class="mr-2 mt-3 " style="display:none" height="50px" width="50px"></td>
-    <td id="cel3"><img src="images/x.svg" alt=""  class="mr-2 mt-3 " style="display:none" height="50px" width="50px"></td>
-  </tr>
-  <tr>
-    <td id="cel4" class="hori"><img src="images/x.svg" alt=""  class="mr-2 mt-3 " style="display:none" height="50px" width="50px"></td>
-    <td id="cel5" class="vert hori"><img src="images/x.svg" alt=""  class="mr-2 mt-3 " style="display:none" height="50px" width="50px"></td>
-    <td id="cel6" class="hori"><img src="images/x.svg" alt=""  class="mr-2 mt-3 " style="display:none" height="50px" width="50px"></td>
-  </tr>
-  <tr>
-    <td id="cel7"><img src="images/x.svg" alt=""  class="mr-2 mt-3 " style="display:none" height="50px" width="50px"></td>
-    <td id="cel8" class="vert"><img src="images/x.svg" alt=""  class="mr-2 mt-3 " style="display:none" height="50px" width="50px"></td>
-    <td id="cel9"><img src="images/x.svg" alt=""  class="mr-2 mt-3 " style="display:none" height="50px" width="50px"></td>
-  </tr>
-</table>
-        
-<!--
-        <p class="lead">
-         <img src="images/redb.png" alt=""  class="mr-2 mt-2" height="80px" width="80px">
-          <a href="#" class="btn btn-lg btn-secondary">New Game</a>
-        </p>
--->
-		  
-
-		  
-		  
-		  <div class="my-3 p-3 bg-black rounded shadow-sm">
+<body class="text-center">
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">TiTaTo</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link " href="">UserName</a>
+        </nav>
+      </div>
+    </header>
+    <main role="main" class="inner cover">
+      <h1 class="cover-heading">
+        <img src="images/avatar2.svg" alt="" class="mr-2 mt-3" height="100px" width="100px">
+      </h1>
+      <!-- Jquery would use id="whosemove" to populate this with Make a move or Their turn based whose move it is -->
+      <p class="lead mb-5" id="whosemove">Make a move </p>
+      <table>
+        <tr>
+          <td id="cel1" class="cell" data-cell="">
+            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+          </td>
+          <td id="cel2" class="vert cell" data-cell="">
+            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+          </td>
+          <td id="cel3" class="cell" data-cell="">
+            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+          </td>
+        </tr>
+        <tr>
+          <td id="cel4" class="cell hori" data-cell="">
+            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+          </td>
+          <td id="cel5" class="cell vert hori" data-cell="">
+            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+          </td>
+          <td id="cel6" class="cell hori" data-cell="">
+            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+          </td>
+        </tr>
+        <tr>
+          <td id="cel7" class="cell" data-cell="">
+            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+          </td>
+          <td id="cel8" class="cell vert" data-cell="">
+            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+          </td>
+          <td id="cel9" class="cell" data-cell="">
+            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+          </td>
+        </tr>
+      </table>
+      <!--           -->
+      <div class="my-3 p-3 bg-black rounded shadow-sm">
         <h5 style="border-bottom: dashed; border-color: #e8b46a " class="  pb-2 mb-0">Score</h5>
-          <div class="media  pt-3">
-<!--           <img src="images/avatar2.svg" alt=""  class="mr-2 mt-2" height="50px" width="50px">-->
+        <div class="media  pt-3">
           <p class="media-body pb-3 mb-0 small lh-125  text-left" style="border-bottom: dashed; border-color: #e8b46a ">
-            <strong >Opponent: _</strong> <strong class=" float-right  ">You: _</strong> 
-         
-        
-           
+            <strong>Opponent: _</strong>
+            <strong class=" float-right  ">You: _</strong>
           </p>
         </div>
-
-  
-    
       </div>
-      </main>
-
-      <footer class="mastfoot mt-auto">
-        <div class="inner">
-          <p>&copy; 2018</p>
-        </div>
-      </footer>
-    </div>
-
-
-    <!-- Bootstrap core JavaScript
+    </main>
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>&copy; 2018</p>
+      </div>
+    </footer>
+  </div>
+  <!-- Bootstrap core JavaScript
     ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
+  <script src="assets/js/vendor/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/game.js"></script>
+  <script>
+  </script>
+</body>
 
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
-    <script src="assets/js/vendor/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/game.js"></script>
-   <script>
-  $(document).ready(function(){
-		 $("img").click(function(){
-			 $(this ).css("visibility", "visible")
-		 });  
-	  });
-	  
-	  </script>
-  </body>
 </html>
-
