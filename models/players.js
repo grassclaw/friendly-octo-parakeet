@@ -1,6 +1,11 @@
 module.exports = function(sequelize, DataTypes) {
-  var gameStats = sequelize.define("Example", {
+  var Players = sequelize.define("Example", {
     gametitle: DataTypes.NAME
   });
-  return Example;
+  Players.associate = function(models) {
+    Players.hasMany(models.Game, {
+      // onDelete: "cascade"
+    });
+  };
+  return Players;
 };
