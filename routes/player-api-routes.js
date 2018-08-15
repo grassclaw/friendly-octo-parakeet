@@ -1,6 +1,5 @@
 // Pull in required dependencies
 var path = require("path");
-
 var db = require("../models");
 
 module.exports = function(app) {
@@ -12,10 +11,7 @@ module.exports = function(app) {
   });
   //Used for login and grabbing a user
   app.get("/api/game/:id", function(req, res) {
-    // Here we add an "include" property to our options in our findOne query
-    // We set the value to an array of the models we want to include in a left outer join
-    // In this case, just db.Post
-    db.Author.findOne({
+    db.Players.findOne({
       where: {
         id: req.params.id
       }
