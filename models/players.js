@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Players = sequelize.define("Example", {
+  var Players = sequelize.define("Player", {
     gametitle: DataTypes.NAME
   });
   Players.associate = function(models) {

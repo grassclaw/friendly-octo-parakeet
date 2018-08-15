@@ -9,6 +9,7 @@ module.exports = function(app) {
       res.json(titato);
     });
   });
+  //Get most recent gamestate
   app.get("/api/gamestate/:id", function(req, res) {
     // NEEDS HELP
     db.gameState
@@ -22,15 +23,16 @@ module.exports = function(app) {
         res.json(titato);
       });
   });
+
   // Create a game state each time a player moves.
-  app.post("/api/examples", function(req, res) {
+  app.post("/api/gameState", function(req, res) {
     db.gameState.create(req.body).then(function(titato) {
       res.json(dbExample);
     });
   });
 
   // Delete an example by id: This would only be availble once games are deleted.
-  app.delete("/api/examples/:id", function(req, res) {
+  app.delete("/api/gameState/:id", function(req, res) {
     db.gameState
       .destroy({ where: { id: req.params.id } })
       .then(function(titato) {

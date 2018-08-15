@@ -22,7 +22,7 @@ CREATE TABLE games (
 CREATE TABLE gamestate (
   gsid INT NOT NULL AUTO_INCREMENT,
   gid INT NOT NULL,
-  pid1Turn Boolean, --player turn fix
+  pid1Turn Boolean, 
   cel1 VARCHAR(30) NOT NULL,
   cel2 VARCHAR(30) NOT NULL,
   cel3 VARCHAR(30) NOT NULL,
@@ -32,5 +32,6 @@ CREATE TABLE gamestate (
   cel7 VARCHAR(30) NOT NULL,
   cel8 VARCHAR(30) NOT NULL,
   cel9 VARCHAR(30) NOT NULL,
+  date TIMESTAMP,
   PRIMARY KEY (gsid)
 );
