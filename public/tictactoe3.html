@@ -1,6 +1,5 @@
 <!doctype html>
 <html lang="en">
-
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -13,7 +12,6 @@
   <!-- Custom styles for this template -->
   <link href="css/style_ad.css" rel="stylesheet">
 </head>
-
 <body class="text-center">
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
     <header class="masthead mb-auto">
@@ -33,12 +31,14 @@
       <table>
         <tr>
           <td id="cel1" class="cell" data-cell="">
-            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
-            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            
+            <!-- <img src="images/mushroom2.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;"> -->
+            <img src="images/hedgehog2.svg" alt="" class="mr-2 mt-3" height="100px" width="100px" style="visibility:visible;">
+            
           </td>
           <td id="cel2" class="vert cell" data-cell="">
-            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
-            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="images/mushroom2.svg" alt="" class="mr-2 mt-3" height="100px" width="100px" style="visibility:visible;">
+            <!-- <img src="images/hedgehog2.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;"> -->
           </td>
           <td id="cel3" class="cell" data-cell="">
             <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
@@ -84,16 +84,80 @@
           </p>
         </div>
       </div>
+      <!--  Modal -->
+      <div id="myModal" class="modal">
+          <!-- Modal content -->
+          <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-body">
+  
+              <h2></h2>
+              <h1 class="cover-heading mb-5">
+                <img src="images/avatar2.svg" alt="" class="mr-2 mt-3" height="100px" width="100px">
+              </h1>
+  
+              <div class="my-3 p-3 bg-black rounded shadow-sm">
+                <!-- <h4 style="border-bottom: dashed; border-color: #e8b46a " class="  pb-2 mb-0">Active Games</h4> -->
+                <div class="media  pt-3">
+                  <img src="images/avatar2.svg" alt="" class="mr-2 mt-2" height="50px" width="50px">
+                  <p class="media-body pb-3 mb-0 small lh-125  text-cnter" id="" style="border-bottom: dashed; border-color: #e8b46a ">
+                    <strong>Opponent Won</strong>
+                    
+  
+  
+                  </p><img src="images/avatar2.svg" alt="" class="ml-2 mt-2" height="50px" width="50px">
+                </div>
+    
+                <h1 class="cover-heading mb-5">
+                    <a href="tictactoe2.html" class=""> <img src="images/exit.png" alt="" class="mr-2 mt-3" height="150px" width="150px"> </a>
+                  </h1>
+              </div>
+            </div>
+            <!-- <div class="modal-footer">
+            <h3>Modal Footer</h3>
+          </div> -->
+          </div>
+  
+        </div>
+        <!-- end Modal  -->
+        
     </main>
     <footer class="mastfoot mt-auto">
       <div class="inner">
-        <p>&copy; 2018</p>
+          <a href="#"  id="myBtn" class=" "><p>&copy; 2018</p></a>
       </div>
     </footer>
   </div>
   <!-- Bootstrap core JavaScript
     ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
+  <script>
+      // Get the modal
+      var modal = document.getElementById('myModal');
+  
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+  
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+  
+      // When the user clicks on the button, open the modal 
+      btn.onclick = function () {
+        modal.style.display = "block";
+      }
+  
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      }
+  
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    </script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="assets/js/vendor/jquery-slim.min.js"><\/script>')</script>
   <script src="assets/js/vendor/popper.min.js"></script>
@@ -102,5 +166,4 @@
   <script>
   </script>
 </body>
-
 </html>

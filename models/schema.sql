@@ -9,6 +9,15 @@ CREATE TABLE players (
   playername VARCHAR(100) NOT NULL,
   PRIMARY KEY (pid)
 );
+-- create games table
+CREATE TABLE games (
+  gid INT NOT NULL AUTO_INCREMENT,
+  gametitle VARCHAR(100) NOT NULL,
+  gameStatus Boolean DEFAULT true,
+  pid1 INT,
+  pid2 INT,
+  PRIMARY KEY (gid)
+);
 -- create gamestats table
 CREATE TABLE gamestate (
   gsid INT NOT NULL AUTO_INCREMENT,
@@ -24,13 +33,4 @@ CREATE TABLE gamestate (
   cel8 VARCHAR(30) NOT NULL,
   cel9 VARCHAR(30) NOT NULL,
   PRIMARY KEY (gsid)
-);
--- create games table
-CREATE TABLE games (
-  gid INT NOT NULL AUTO_INCREMENT,
-  gametitle VARCHAR(100) NOT NULL,
-  gameStatus Boolean DEFAULT true,
-  pid1 INT,
-  pid2 INT,
-  PRIMARY KEY (gid)
 );
