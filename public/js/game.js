@@ -7,7 +7,7 @@ $(document).ready(function() {
     var id = $(this).data("id");
     // Send the PUT request.   api/?/
     $.ajax("/" + id, {
-      type: "PUT"
+      type: "POST"
     }).then(function(response) {
       GET(data); //  expect constructor as in app/data/gameState.js
 

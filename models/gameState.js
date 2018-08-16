@@ -1,7 +1,7 @@
 module.exports = function(sequelize, DataTypes) {
-  var gameState = sequelize.define("Example", {
-    gid: DataTypes.Number,
-    pid1Turn: DataTypes.Boolean,
+  var gamestate = sequelize.define("gameState", {
+    // gid: DataTypes.Number,
+    pid1Turn: DataTypes.BOOLEAN,
     cel1: DataTypes.STRING,
     cel2: DataTypes.STRING,
     cel3: DataTypes.STRING,
@@ -12,12 +12,12 @@ module.exports = function(sequelize, DataTypes) {
     cel8: DataTypes.STRING,
     cel9: DataTypes.STRING
   });
-  gameState.associate = function(models) {
-    gameState.belongsTo(models.Game, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
-  return Example;
+  // gamestate.associate = function(models) {
+  //   gamestate.belongsTo(models.Game, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
+  return gamestate;
 };

@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -8,9 +8,9 @@
   <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
   <title>TiTaTo Busters</title>
   <!-- Bootstrap core CSS -->
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="../public/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
-  <link href="css/style_ad.css" rel="stylesheet">
+  <link href="../public/css/style_ad.css" rel="stylesheet">
 </head>
 <body class="text-center">
   <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
@@ -24,53 +24,51 @@
     </header>
     <main role="main" class="inner cover">
       <h1 class="cover-heading">
-        <img src="images/avatar2.svg" alt="" class="mr-2 mt-3" height="100px" width="100px">
+        <img src="../public/images/avatar2.svg" alt="" class="mr-2 mt-3" height="100px" width="100px">
       </h1>
       <!-- Jquery would use id="whosemove" to populate this with Make a move or Their turn based whose move it is -->
       <p class="lead mb-5" id="whosemove">Make a move </p>
       <table>
         <tr>
           <td id="cel1" class="cell" data-cell="">
-            
-            <!-- <img src="images/mushroom2.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;"> -->
-            <img src="images/hedgehog2.svg" alt="" class="mr-2 mt-3" height="100px" width="100px" style="visibility:visible;">
-            
+            <img src="../public/images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
           </td>
           <td id="cel2" class="vert cell" data-cell="">
-            <img src="images/mushroom2.svg" alt="" class="mr-2 mt-3" height="100px" width="100px" style="visibility:visible;">
-            <!-- <img src="images/hedgehog2.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;"> -->
+            <img src="../public/images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
           </td>
           <td id="cel3" class="cell" data-cell="">
-            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
-            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
           </td>
         </tr>
         <tr>
           <td id="cel4" class="cell hori" data-cell="">
-            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
-            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
           </td>
           <td id="cel5" class="cell vert hori" data-cell="">
-            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
-            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
           </td>
           <td id="cel6" class="cell hori" data-cell="">
-            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
-            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
           </td>
         </tr>
         <tr>
           <td id="cel7" class="cell" data-cell="">
-            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
-            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
           </td>
           <td id="cel8" class="cell vert" data-cell="">
-            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
-            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
           </td>
           <td id="cel9" class="cell" data-cell="">
-            <img src="images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
-            <img src="images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/x.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
+            <img src="../public/images/o.svg" alt="" class="mr-2 mt-3" height="50px" width="50px" style="visibility:hidden;">
           </td>
         </tr>
       </table>
@@ -93,23 +91,23 @@
   
               <h2></h2>
               <h1 class="cover-heading mb-5">
-                <img src="images/avatar2.svg" alt="" class="mr-2 mt-3" height="100px" width="100px">
+                <img src="../public/images/avatar2.svg" alt="" class="mr-2 mt-3" height="100px" width="100px">
               </h1>
   
               <div class="my-3 p-3 bg-black rounded shadow-sm">
                 <!-- <h4 style="border-bottom: dashed; border-color: #e8b46a " class="  pb-2 mb-0">Active Games</h4> -->
                 <div class="media  pt-3">
-                  <img src="images/avatar2.svg" alt="" class="mr-2 mt-2" height="50px" width="50px">
+                  <img src="../public/images/avatar2.svg" alt="" class="mr-2 mt-2" height="50px" width="50px">
                   <p class="media-body pb-3 mb-0 small lh-125  text-cnter" id="" style="border-bottom: dashed; border-color: #e8b46a ">
                     <strong>Opponent Won</strong>
                     
   
   
-                  </p><img src="images/avatar2.svg" alt="" class="ml-2 mt-2" height="50px" width="50px">
+                  </p><img src="../public/images/avatar2.svg" alt="" class="ml-2 mt-2" height="50px" width="50px">
                 </div>
     
                 <h1 class="cover-heading mb-5">
-                    <a href="tictactoe2.html" class=""> <img src="images/exit.png" alt="" class="mr-2 mt-3" height="150px" width="150px"> </a>
+                    <a href="tictactoe2.html" class=""> <img src="../public/images/exit.png" alt="" class="mr-2 mt-3" height="150px" width="150px"> </a>
                   </h1>
               </div>
             </div>

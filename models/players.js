@@ -1,11 +1,14 @@
 module.exports = function(sequelize, DataTypes) {
-  var Players = sequelize.define("Example", {
-    gametitle: DataTypes.NAME
+  var players = sequelize.define("Player", {
+    playername: {
+      type: DataTypes.STRING,
+      unique: true
+    }
   });
-  Players.associate = function(models) {
-    Players.hasMany(models.Game, {
-      // onDelete: "cascade"
+  players.associate = function(models) {
+    players.hasMany(models.Game, {
+      onDelete: "cascade"
     });
   };
-  return Players;
+  return players;
 };
